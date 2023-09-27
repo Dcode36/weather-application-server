@@ -20,6 +20,10 @@ app.get('/api/weather/:city', async (req, res) => {
   }
 });
 
+app.use('/',(req,res)=>{
+  res.send("server is running")
+})
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
